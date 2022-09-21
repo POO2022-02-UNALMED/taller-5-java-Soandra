@@ -1,7 +1,6 @@
 package zooAnimales;
 
 import gestion.Zona;
-
 public class Animal {
      private static int totalAnimales;
      private String nombre;
@@ -10,7 +9,7 @@ public class Animal {
      private String genero;
      private Zona zona;
 
-     public Animal(){
+     public Animal() {
           Animal.totalAnimales++;
      }
 
@@ -34,11 +33,12 @@ public class Animal {
      public String movimiento(){
           return "desplazarse";
      }
+
      public static String totalPorTipo(){
-          return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" +
-                  "Aves: " + Ave.cantidadAves() + "\n" +
-                  "Reptiles: " + Reptil.cantidadReptiles() + "\n" +
-                  "Peces: " + Pez.cantidadPeces() + "\n" +
+          return "Mamiferos: " + Mamifero.cantidadMamiferos() + '\n' +
+                  "Aves: " + Ave.cantidadAves() + '\n' +
+                  "Reptiles: " + Reptil.cantidadReptiles() + '\n' +
+                  "Peces: " + Pez.cantidadPeces() + '\n' +
                   "Anfibios: " + Anfibio.cantidadAnfibios();
      }
 
@@ -107,5 +107,4 @@ public class Animal {
      public void setZona(Zona zona) {
           this.zona = zona;
      }
-
 }
