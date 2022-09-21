@@ -39,13 +39,25 @@ public class Animal {
                   "Aves: " + Ave.cantidadAves() + "\n" +
                   "Reptiles: " + Reptil.cantidadReptiles() + "\n" +
                   "Peces: " + Pez.cantidadPeces() + "\n" +
-                  "Anfibis: " + Anfibio.cantidadAnfibios();
+                  "Anfibios: " + Anfibio.cantidadAnfibios();
      }
 
      @Override
-     public String toString(){
-         return "Mi nombres es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat +
-                 " y mi genero es " + this.genero + "la zona en la que me ubico es " + this.zona + ", en el " + this.zona.getZoo();
+     public String toString() {
+          if (this.zona == null) {
+               return "Mi nombre es " + this.nombre +
+                       ", tengo una edad de " + this.edad +
+                       ", habito en " + this.habitat +
+                       " y mi genero es " + this.genero;
+          }
+          else{
+               return "Mi nombre es " + this.nombre +
+                       ", tengo una edad de " + this.edad +
+                       ", habito en '" + this.habitat +
+                       " y mi genero es " + this.genero +
+                       ", la zona en la que me ubico es " + this.zona +
+                       ", en el " + this.zona.getZoo();
+          }
      }
 
      public static int getTotalAnimales() {
